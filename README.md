@@ -11,6 +11,7 @@ This project was featured on my YouTube channel **IoT Bhai**. The code is design
 
 ## Product Link: https://reyax.com//products/RYLR998
 
+
 ## 🛠 Hardware Required
 * **2x** ESP32 Development Boards (DOIT DevKit V1 or similar)
 * **2x** Reyax RYLR998 LoRa Modules
