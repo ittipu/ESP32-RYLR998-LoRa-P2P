@@ -27,7 +27,7 @@ The RYLR998 communicates via UART. Since the module is 3.3V logic, it works dire
 
 > **Note:** Ensure your antennas are firmly connected before powering the modules to avoid damaging the RF chip.
 
-![Circuit Diagram](images/circuit_diagram_esp32_and_RYLR998_bb.jpg)
+![Circuit Diagram](circuit_diagram_esp32_and_RYLR998_bb.jpg)
 
 ### Wiring Schematic (Mermaid Backup)
 ```mermaid
