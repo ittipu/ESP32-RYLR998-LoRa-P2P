@@ -39,3 +39,24 @@ graph TD
     ESP32 -- GND --> RYLR(GND)
     ESP32 -- GPIO 17 (TX2) --> RYLR(RXD)
     ESP32 -- GPIO 16 (RX2) --> RYLR(TXD)
+```
+💻 How to Use the Code
+Open RYLR998_Dual_Mode.ino in Arduino IDE.
+
+Install the ESP32 Board Support Package if you haven't already.
+
+Configure Unit 1 (Sender):
+
+Set localAddress = 1
+
+Set destinationAddress = 2
+
+Upload to the first ESP32.
+
+Configure Unit 2 (Receiver):
+
+Set localAddress = 2
+
+Set destinationAddress = 1
+
+Upload to the second ESP32.
