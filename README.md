@@ -40,23 +40,27 @@ graph TD
     ESP32 -- GPIO 17 (TX2) --> RYLR(RXD)
     ESP32 -- GPIO 16 (RX2) --> RYLR(TXD)
 ```
-💻 How to Use the Code
-Open RYLR998_Dual_Mode.ino in Arduino IDE.
+## 💻 How to Use the Code
 
-Install the ESP32 Board Support Package if you haven't already.
+1.  Open `RYLR998_Dual_Mode.ino` in Arduino IDE.
+2.  Install the **ESP32 Board Support Package** if you haven't already.
+3.  **Configure Unit 1 (Sender):**
+    * Set `localAddress = 1`
+    * Set `destinationAddress = 2`
+    * Upload to the first ESP32.
+4.  **Configure Unit 2 (Receiver):**
+    * Set `localAddress = 2`
+    * Set `destinationAddress = 1`
+    * Upload to the second ESP32.
 
-Configure Unit 1 (Sender):
+### Interpreting the Output
+Open the Serial Monitor (115200 baud) on the Receiver unit. You will see output like this:
 
-Set localAddress = 1
-
-Set destinationAddress = 2
-
-Upload to the first ESP32.
-
-Configure Unit 2 (Receiver):
-
-Set localAddress = 2
-
-Set destinationAddress = 1
-
-Upload to the second ESP32.
+```text
+RECEIVED: +RCV=1,16,Hello from Tipu!,-36,11
+-----------------------------
+Message Content: Hello from Tipu!
+From ID: 1
+Signal Strength (RSSI): -36 dBm
+Signal Quality (SNR): 11 dB
+-----------------------------
